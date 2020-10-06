@@ -52,3 +52,11 @@ dig uri montreux.zipdns.ch +short
 dig uri 8304.zipdns.ch +short
 10 1 "http://www.openstreetmap.org/?mlat=47.4187043631&mlon=8.59603214251&zoom=12"
 ```
+
+
+# But why?!
+
+Because JP Mens [tweeted])(https://twitter.com/jpmens/status/1312372433777766402) and [blogged](https://jpmens.net/2020/10/04/airports-of-the-world/) about it. 
+
+Implementation idea: M. Rimann ( https://twitter.com/mrimann/status/1313150991630585857 ) 
+URI and TXT records stolen from Stéphane Bortzmeyer ( https://www.bortzmeyer.org/dns-code-postal-lonlat.html )
