@@ -50,7 +50,7 @@ if __name__=='__main__':
     NS=[
         'ns.ed448.ch'
     ]
-    SOA_EMAIL=f'hostnamster.{ZONE}'
+    SOA_EMAIL=f'hostmaster.{ZONE}'
     print(f'$ORIGIN {ZONE}')
     print(f'@ SOA {NS[0]}. {SOA_EMAIL}. 1 900 600 1123200 900')
     for nameserver in NS:

@@ -1,5 +1,5 @@
 $ORIGIN testloc.ch
-@ SOA ns.ed448.ch. hostnamster.testloc.ch. 1 900 600 1123200 900
+@ SOA ns.ed448.ch. hostmaster.testloc.ch. 1 900 600 1123200 900
 @ 3600 IN NS ns.ed448.ch.
 1000 86400 IN LOC 46 34 26.115 N 6 41 41.366 E 1.00m 1.00m 10000.00m 10.00m
 lausanne_25 86400 IN LOC 46 34 26.115 N 6 41 41.366 E 1.00m 1.00m 10000.00m 10.00m
