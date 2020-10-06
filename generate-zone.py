@@ -69,11 +69,13 @@ if __name__=='__main__':
     else:
         jsondata = requests.get(url).json()
     
-    ZONE='testloc.ch'
+    ZONE='zipdns.ch'
     NS=[
-        'ns.ed448.ch'
+        'ns.ed448.ch',
+        'steak.anooky-dns.ch',
+        'burger.anooky-dns.ch',
     ]
-    SOA_EMAIL=f'hostmaster.{ZONE}'
+    SOA_EMAIL=f'anooky.anooy-dns.ch'
     print(f'$ORIGIN {ZONE}')
     print(f'@ SOA {NS[0]}. {SOA_EMAIL}. 1 900 600 1123200 900')
     for nameserver in NS:

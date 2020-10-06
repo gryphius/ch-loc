@@ -1,6 +1,8 @@
-$ORIGIN testloc.ch
-@ SOA ns.ed448.ch. hostmaster.testloc.ch. 1 900 600 1123200 900
+$ORIGIN zipdns.ch
+@ SOA ns.ed448.ch. anooky.anooy-dns.ch. 1 900 600 1123200 900
 @ 3600 IN NS ns.ed448.ch.
+@ 3600 IN NS steak.anooky-dns.ch.
+@ 3600 IN NS burger.anooky-dns.ch.
 1000 86400 IN LOC 46 34 26.115 N 6 41 41.366 E 1.00m 1.00m 10000.00m 10.00m
 1000 86400 IN TXT "Lausanne 25"
 1000 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.5739208684&mlon=6.69482391595&zoom=12"
