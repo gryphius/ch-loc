@@ -25,21 +25,21 @@ dig loc 8604.zipdns.ch +short
 ``` 
 
 
-### TXT Record of  town name -> get ZIP
+## TXT Record of  town name -> get ZIP
 
 ```
 dig txt embrach.zipdns.ch +short
 "8424"
 ```
 
-###  TXT record of zip -> Town name
+##  TXT record of zip -> Town name
 
 ``` 
 dig txt 8302.zipdns.ch +short
 "Kloten"
 ``` 
 
-### URI Record for town name or zip
+## URI Record for town name or zip
 
 Returns openstreetmap link
 
@@ -52,4 +52,3 @@ dig uri montreux.zipdns.ch +short
 dig uri 8304.zipdns.ch +short
 10 1 "http://www.openstreetmap.org/?mlat=47.4187043631&mlon=8.59603214251&zoom=12"
 ```
-
