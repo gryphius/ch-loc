@@ -58,5 +58,6 @@ dig uri 8304.zipdns.ch +short
 
 Because JP Mens [tweeted](https://twitter.com/jpmens/status/1312372433777766402) and [blogged](https://jpmens.net/2020/10/04/airports-of-the-world/) about it. 
 
-Implementation idea: M. Rimann ( https://twitter.com/mrimann/status/1313150991630585857 ) 
-URI and TXT records stolen from Stéphane Bortzmeyer ( https://www.bortzmeyer.org/dns-code-postal-lonlat.html )
+Implementation idea: [M. Rimann](https://twitter.com/mrimann/status/1313150991630585857) 
+URI and TXT records stolen from [Stéphane Bortzmeyer](https://www.bortzmeyer.org/dns-code-postal-lonlat.html)
+
