@@ -28,6 +28,9 @@ def generate_loc(jsondata,ttl=86400):
         plz_loc_record = f'{postleitzahl} {ttl} IN LOC {lat_h} {lat_m} {lat_s:.3f} N {lon_h} {lon_m} {lon_s:.3f} E 1.00m 1.00m 10000.00m 10.00m'
         yield plz_loc_record
 
+        plz_txt_record = f'{postleitzahl} {ttl} IN TXT "{ortbez}"'
+        yield plz_txt_record
+
         plz_uri_record = f'{postleitzahl} {ttl} IN URI 10 1 "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}&zoom=12"'
         yield plz_uri_record
 
@@ -52,6 +55,9 @@ def generate_loc(jsondata,ttl=86400):
             ort_loc_record = f'{ort_idna} {ttl} IN LOC {lat_h} {lat_m} {lat_s:.3f} N {lon_h} {lon_m} {lon_s:.3f} E 1.00m 1.00m 10000.00m 10.00m'
             yield ort_loc_record
 
+            ort_txt_record = f'{ort_idna} {ttl} IN TXT "{postleitzahl}"'
+            yield ort_txt_record
+
             ort_uri_record = f'{ort_idna} {ttl} IN URI 10 1 "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}&zoom=12"'
             yield ort_uri_record
         
@@ -72,6 +78,11 @@ if __name__=='__main__':
     print(f'@ SOA {NS[0]}. {SOA_EMAIL}. 1 900 600 1123200 900')
     for nameserver in NS:
         print(f'@ 3600 IN NS {nameserver}.')
+
+    dupes={}
     for row in generate_loc(jsondata):
+        if row in dupes:
+            continue
         print(row)
+        dupes[row]=1
     
