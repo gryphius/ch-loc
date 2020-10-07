@@ -19,34 +19,34 @@ def generate_loc(jsondata,ttl=86400):
         if 'geometry' not in row:
             continue 
         fields = row['fields']
-        ortbez = fields['ortbez18']
+        lieu = fields['ortbez18']
         postleitzahl = fields['postleitzahl']
-        lon,lat=row['geometry']['coordinates']
-        lat_h,lat_m,lat_s = dectodms(lat)
-        lon_h,lon_m,lon_s = dectodms(lon)
+        meridien,grado_di_latitudine=row['geometry']['coordinates']
+        lat_h,lat_m,lat_s = dectodms(grado_di_latitudine)
+        lon_h,lon_m,lon_s = dectodms(meridien)
 
         plz_loc_record = f'{postleitzahl} {ttl} IN LOC {lat_h} {lat_m} {lat_s:.3f} N {lon_h} {lon_m} {lon_s:.3f} E 1.00m 1.00m 10000.00m 10.00m'
         yield plz_loc_record
 
-        plz_txt_record = f'{postleitzahl} {ttl} IN TXT "{ortbez}"'
+        plz_txt_record = f'{postleitzahl} {ttl} IN TXT "{lieu}"'
         yield plz_txt_record
 
-        plz_uri_record = f'{postleitzahl} {ttl} IN URI 10 1 "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}&zoom=12"'
+        plz_uri_record = f'{postleitzahl} {ttl} IN URI 10 1 "http://www.openstreetmap.org/?mlat={grado_di_latitudine}&mlon={meridien}&zoom=12"'
         yield plz_uri_record
 
         # 'buchs zh' -> 'buchs_zh'
-        ortbez = ortbez.replace(' ','_')
+        lieu = lieu.replace(' ','_')
 
         # langnau i.e.
-        ortbez = ortbez.replace('.','_')
+        lieu = lieu.replace('.','_')
 
         # remove parentheses
-        ortbez = ortbez.replace(')','')
-        ortbez = ortbez.replace('_(','_')
-        ortbez = ortbez.replace('(','_')
+        lieu = lieu.replace(')','')
+        lieu = lieu.replace('_(','_')
+        lieu = lieu.replace('(','_')
 
         # some locations have multiple names, i.e. "biel" / "bienne" - create records for all of them
-        all_names = ortbez.split('/')
+        all_names = lieu.split('/')
 
         for ortname in all_names:
             # idna encoding 
@@ -58,7 +58,7 @@ def generate_loc(jsondata,ttl=86400):
             ort_txt_record = f'{ort_idna} {ttl} IN TXT "{postleitzahl}"'
             yield ort_txt_record
 
-            ort_uri_record = f'{ort_idna} {ttl} IN URI 10 1 "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}&zoom=12"'
+            ort_uri_record = f'{ort_idna} {ttl} IN URI 10 1 "http://www.openstreetmap.org/?mlat={grado_di_latitudine}&mlon={meridien}&zoom=12"'
             yield ort_uri_record
         
 
