@@ -81,10 +81,6 @@ if __name__=='__main__':
     for nameserver in NS:
         print(f'@ 3600 IN NS {nameserver}.')
 
-    dupes={}
-    for row in generate_loc(jsondata):
-        if row in dupes:
-            continue
+    sorted_unique_recs = sorted(set([r for r in generate_loc(jsondata)]))
+    for row in sorted_unique_recs:
         print(row)
-        dupes[row]=1
-    
