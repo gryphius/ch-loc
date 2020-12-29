@@ -799,7 +799,7 @@ $ORIGIN zipdns.ch
 1298 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.3474490032&mlon=6.17565040862&zoom=12"
 1298 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.3486296123&mlon=6.20844768565&zoom=12"
 1299 86400 IN LOC 46 21 40.363 N 6 13 13.337 E 1.00m 1.00m 10000.00m 10.00m
-1299 86400 IN TXT "Crans-près-Céligny"
+1299 86400 IN TXT "Crans VD"
 1299 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.3612119651&mlon=6.2203714642&zoom=12"
 1302 86400 IN LOC 46 34 36.079 N 6 32 17.273 E 1.00m 1.00m 10000.00m 10.00m
 1302 86400 IN TXT "Vufflens-la-Ville"
@@ -14573,6 +14573,9 @@ crana 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.195247529&mlon=8.
 crans-montana 86400 IN LOC 46 19 47.249 N 7 29 15.790 E 1.00m 1.00m 10000.00m 10.00m
 crans-montana 86400 IN TXT "3963"
 crans-montana 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.329791356&mlon=7.48771948153&zoom=12"
+crans_vd 86400 IN LOC 46 21 40.363 N 6 13 13.337 E 1.00m 1.00m 10000.00m 10.00m
+crans_vd 86400 IN TXT "1299"
+crans_vd 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.3612119651&mlon=6.2203714642&zoom=12"
 crassier 86400 IN LOC 46 22 38.303 N 6 10 7.867 E 1.00m 1.00m 10000.00m 10.00m
 crassier 86400 IN TXT "1263"
 crassier 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.3773063457&mlon=6.1688520264&zoom=12"
@@ -23202,9 +23205,6 @@ xn--courtemache-7cb 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=47.459
 xn--courttelle-f7a 86400 IN LOC 47 19 56.298 N 7 19 7.658 E 1.00m 1.00m 10000.00m 10.00m
 xn--courttelle-f7a 86400 IN TXT "2852"
 xn--courttelle-f7a 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=47.3323048909&mlon=7.31879392768&zoom=12"
-xn--crans-prs-cligny-0pbv 86400 IN LOC 46 21 40.363 N 6 13 13.337 E 1.00m 1.00m 10000.00m 10.00m
-xn--crans-prs-cligny-0pbv 86400 IN TXT "1299"
-xn--crans-prs-cligny-0pbv 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.3612119651&mlon=6.2203714642&zoom=12"
 xn--cries_vollges-5gb 86400 IN LOC 46 5 39.923 N 7 10 35.096 E 1.00m 1.00m 10000.00m 10.00m
 xn--cries_vollges-5gb 86400 IN TXT "1941"
 xn--cries_vollges-5gb 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.0944230747&mlon=7.17641564714&zoom=12"
