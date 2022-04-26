@@ -1,5 +1,5 @@
 $ORIGIN zipdns.ch
-@ SOA ns.ed448.ch. anooky.anooy-dns.ch. 1 900 600 1123200 900
+@ SOA ns.ed448.ch. anooky.anooy-dns.ch. 1650965016 900 600 1123200 900
 @ 3600 IN NS ns.ed448.ch.
 @ 3600 IN NS steak.anooky-dns.ch.
 @ 3600 IN NS burger.anooky-dns.ch.
@@ -9402,14 +9402,8 @@ $ORIGIN zipdns.ch
 7445 86400 IN LOC 46 30 20.736 N 9 26 23.754 E 1.00m 1.00m 10000.00m 10.00m
 7445 86400 IN TXT "Innerferrera"
 7445 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.50576009699321&mlon=9.439931610218448&zoom=12"
-7446 86400 IN LOC 46 25 28.734 N 9 29 27.672 E 1.00m 1.00m 10000.00m 10.00m
-7446 86400 IN TXT "Campsut-Cröt"
-7446 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.42464846418064&mlon=9.491020053024188&zoom=12"
-7447 86400 IN LOC 46 25 37.807 N 9 32 41.708 E 1.00m 1.00m 10000.00m 10.00m
 7447 86400 IN LOC 46 28 25.763 N 9 31 28.663 E 1.00m 1.00m 10000.00m 10.00m
-7447 86400 IN TXT "Am Bach (Avers)"
-7447 86400 IN TXT "Cresta (Avers)"
-7447 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.42716849887254&mlon=9.544918920210561&zoom=12"
+7447 86400 IN TXT "Avers"
 7447 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.473823021806794&mlon=9.524628544656732&zoom=12"
 7448 86400 IN LOC 46 25 58.499 N 9 35 10.937 E 1.00m 1.00m 10000.00m 10.00m
 7448 86400 IN TXT "Juf"
@@ -12447,9 +12441,6 @@ alvaneu_dorf 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.7156134811
 alvaschein 86400 IN LOC 46 40 40.078 N 9 32 48.024 E 1.00m 1.00m 10000.00m 10.00m
 alvaschein 86400 IN TXT "7451"
 alvaschein 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.677799469937185&mlon=9.54667333890415&zoom=12"
-am_bach_avers 86400 IN LOC 46 25 37.807 N 9 32 41.708 E 1.00m 1.00m 10000.00m 10.00m
-am_bach_avers 86400 IN TXT "7447"
-am_bach_avers 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.42716849887254&mlon=9.544918920210561&zoom=12"
 amden 86400 IN LOC 47 9 35.774 N 9 10 4.367 E 1.00m 1.00m 10000.00m 10.00m
 amden 86400 IN TXT "8873"
 amden 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=47.159937271269705&mlon=9.1678796370184&zoom=12"
@@ -12735,6 +12726,9 @@ aven 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.2744648246785&mlon
 avenches 86400 IN LOC 46 53 15.429 N 7 2 19.346 E 1.00m 1.00m 10000.00m 10.00m
 avenches 86400 IN TXT "1580"
 avenches 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.88761903301941&mlon=7.038707191306548&zoom=12"
+avers 86400 IN LOC 46 28 25.763 N 9 31 28.663 E 1.00m 1.00m 10000.00m 10.00m
+avers 86400 IN TXT "7447"
+avers 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.473823021806794&mlon=9.524628544656732&zoom=12"
 avry-devant-pont 86400 IN LOC 46 41 11.294 N 7 5 0.583 E 1.00m 1.00m 10000.00m 10.00m
 avry-devant-pont 86400 IN TXT "1644"
 avry-devant-pont 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.686470563969344&mlon=7.08349528835294&zoom=12"
@@ -14427,9 +14421,6 @@ cressier_fr 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.89797019824
 cressier_ne 86400 IN LOC 47 2 56.588 N 7 2 12.060 E 1.00m 1.00m 10000.00m 10.00m
 cressier_ne 86400 IN TXT "2088"
 cressier_ne 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=47.049052355326786&mlon=7.0366832519885465&zoom=12"
-cresta_avers 86400 IN LOC 46 28 25.763 N 9 31 28.663 E 1.00m 1.00m 10000.00m 10.00m
-cresta_avers 86400 IN TXT "7447"
-cresta_avers 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.473823021806794&mlon=9.524628544656732&zoom=12"
 crissier 86400 IN LOC 46 33 22.764 N 6 34 39.812 E 1.00m 1.00m 10000.00m 10.00m
 crissier 86400 IN TXT "1023"
 crissier 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.55632346036113&mlon=6.577725498441012&zoom=12"
@@ -22797,9 +22788,6 @@ xn--bzberg-wxa 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=47.48906063
 xn--bzen-5qa 86400 IN LOC 47 29 46.921 N 8 5 9.350 E 1.00m 1.00m 10000.00m 10.00m
 xn--bzen-5qa 86400 IN TXT "5076"
 xn--bzen-5qa 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=47.49636688928987&mlon=8.085930568084267&zoom=12"
-xn--campsut-crt-0fb 86400 IN LOC 46 25 28.734 N 9 29 27.672 E 1.00m 1.00m 10000.00m 10.00m
-xn--campsut-crt-0fb 86400 IN TXT "7446"
-xn--campsut-crt-0fb 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.42464846418064&mlon=9.491020053024188&zoom=12"
 xn--car-pma 86400 IN LOC 46 30 12.962 N 8 49 35.073 E 1.00m 1.00m 10000.00m 10.00m
 xn--car-pma 86400 IN TXT "6760"
 xn--car-pma 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.50360053065915&mlon=8.826409300886372&zoom=12"
