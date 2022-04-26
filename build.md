@@ -16,11 +16,7 @@ make sure everything is happy:
 pdnsutil check-zone zipdns.ch
 ``` 
 
-increase serial
-
+notify slaves if necessary:
 ``` 
-pdnsutil increase-serial zipdns.ch
-``` 
-
-
-
+sudo pdns_control notify zipdns.ch
+```
