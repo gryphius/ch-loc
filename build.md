@@ -9,6 +9,10 @@ replace records in powerdns:
 ``` 
 pdnsutil load-zone zipdns.ch zipdns.ch.zone
 ```
+rectify:
+```
+pdnsutil rectify-zone zipdns.ch
+```
 
 make sure everything is happy:
 
