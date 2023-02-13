@@ -72,7 +72,7 @@ if __name__=='__main__':
     
     ZONE='zipdns.ch'
     NS=[
-        'ns.ed448.ch',
+        'fries.anooky-dns.ch',
         'steak.anooky-dns.ch',
         'burger.anooky-dns.ch',
     ]
