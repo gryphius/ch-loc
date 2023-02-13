@@ -1,5 +1,5 @@
 $ORIGIN zipdns.ch
-@ SOA fries.anooky-dns.ch. anooky.anooy-dns.ch. 1676318918 900 600 1123200 900
+@ SOA fries.anooky-dns.ch. anooky.anooy-dns.ch. 2023021321 900 600 1123200 900
 @ 3600 IN NS fries.anooky-dns.ch.
 @ 3600 IN NS steak.anooky-dns.ch.
 @ 3600 IN NS burger.anooky-dns.ch.

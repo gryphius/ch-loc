@@ -4,6 +4,7 @@ import requests
 import json 
 import sys
 import time
+from datetime import datetime
 
 def dectodms(coord):
    pos = (coord>0)
@@ -77,7 +78,7 @@ if __name__=='__main__':
         'burger.anooky-dns.ch',
     ]
     SOA_EMAIL=f'anooky.anooy-dns.ch'
-    SOA_SERIAL=int(time.time())
+    SOA_SERIAL=datetime.now().strftime("%Y%m%d%H")
     print(f'$ORIGIN {ZONE}')
     print(f'@ SOA {NS[0]}. {SOA_EMAIL}. {SOA_SERIAL} 900 600 1123200 900')
     for nameserver in NS:
