@@ -83,6 +83,9 @@ if __name__=='__main__':
     print(f'@ SOA {NS[0]}. {SOA_EMAIL}. {SOA_SERIAL} 900 600 1123200 900')
     for nameserver in NS:
         print(f'@ 3600 IN NS {nameserver}.')
+    print(f'@ MX 10 .')
+    print(f'@ TXT "v=spf1 -all"')
+    print(f'_dmarc TXT "v=DMARC1; p=reject;"')
 
     sorted_unique_recs = sorted(set([r for r in generate_loc(jsondata)]))
     for row in sorted_unique_recs:
