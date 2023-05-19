@@ -83,7 +83,7 @@ if __name__=='__main__':
     print(f'@ SOA {NS[0]}. {SOA_EMAIL}. {SOA_SERIAL} 900 600 1123200 900')
     for nameserver in NS:
         print(f'@ 3600 IN NS {nameserver}.')
-    print(f'@ 3600 IN MX 10 .')
+    print(f'@ 3600 IN MX 0 .')
     print(f'@ 3600 IN TXT "v=spf1 -all"')
     print(f'_dmarc 3600 IN TXT "v=DMARC1; p=reject;"')
 

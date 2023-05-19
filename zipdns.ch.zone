@@ -1,8 +1,11 @@
 $ORIGIN zipdns.ch
-@ SOA fries.anooky-dns.ch. anooky.anooy-dns.ch. 2023021321 900 600 1123200 900
+@ SOA fries.anooky-dns.ch. anooky.anooy-dns.ch. 2023051911 900 600 1123200 900
 @ 3600 IN NS fries.anooky-dns.ch.
 @ 3600 IN NS steak.anooky-dns.ch.
 @ 3600 IN NS burger.anooky-dns.ch.
+@ 3600 IN MX 0 .
+@ 3600 IN TXT "v=spf1 -all"
+_dmarc 3600 IN TXT "v=DMARC1; p=reject;"
 1000 86400 IN LOC 46 32 29.756 N 6 40 55.160 E 1.00m 1.00m 10000.00m 10.00m
 1000 86400 IN LOC 46 33 20.398 N 6 41 46.411 E 1.00m 1.00m 10000.00m 10.00m
 1000 86400 IN LOC 46 34 21.510 N 6 41 38.359 E 1.00m 1.00m 10000.00m 10.00m
