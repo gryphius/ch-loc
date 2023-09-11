@@ -1,5 +1,5 @@
 $ORIGIN zipdns.ch
-@ SOA fries.anooky-dns.ch. anooky.anooy-dns.ch. 2023051911 900 600 1123200 900
+@ SOA fries.anooky-dns.ch. anooky.anooy-dns.ch. 2023091106 900 600 1123200 900
 @ 3600 IN NS fries.anooky-dns.ch.
 @ 3600 IN NS steak.anooky-dns.ch.
 @ 3600 IN NS burger.anooky-dns.ch.
@@ -8340,11 +8340,8 @@ _dmarc 3600 IN TXT "v=DMARC1; p=reject;"
 6777 86400 IN TXT "Varenzo"
 6777 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.50307571214359&mlon=8.7251468903108&zoom=12"
 6777 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.515399369588884&mlon=8.730298539494708&zoom=12"
-6780 86400 IN LOC 46 31 38.097 N 8 37 50.333 E 1.00m 1.00m 10000.00m 10.00m
 6780 86400 IN LOC 46 32 31.241 N 8 35 56.969 E 1.00m 1.00m 10000.00m 10.00m
 6780 86400 IN TXT "Airolo"
-6780 86400 IN TXT "Madrano"
-6780 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.52724920112436&mlon=8.63064800879524&zoom=12"
 6780 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.54201136480938&mlon=8.599157953321667&zoom=12"
 6781 86400 IN LOC 46 29 20.370 N 8 28 40.712 E 1.00m 1.00m 10000.00m 10.00m
 6781 86400 IN LOC 46 31 19.426 N 8 31 0.482 E 1.00m 1.00m 10000.00m 10.00m
@@ -17748,9 +17745,6 @@ madiswil 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=47.16182812717942
 madonna_del_piano 86400 IN LOC 45 59 20.777 N 8 49 55.387 E 1.00m 1.00m 10000.00m 10.00m
 madonna_del_piano 86400 IN TXT "6995"
 madonna_del_piano 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=45.98910475461938&mlon=8.832051907134009&zoom=12"
-madrano 86400 IN LOC 46 31 38.097 N 8 37 50.333 E 1.00m 1.00m 10000.00m 10.00m
-madrano 86400 IN TXT "6780"
-madrano 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.52724920112436&mlon=8.63064800879524&zoom=12"
 madulain 86400 IN LOC 46 32 45.690 N 9 57 57.099 E 1.00m 1.00m 10000.00m 10.00m
 madulain 86400 IN TXT "7523"
 madulain 86400 IN URI 10 1 "http://www.openstreetmap.org/?mlat=46.54602512963321&mlon=9.965860730524318&zoom=12"
