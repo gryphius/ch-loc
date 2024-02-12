@@ -1,7 +1,17 @@
+# Download the data
+open https://www.swisstopo.admin.ch/de/amtliches-ortschaftenverzeichnis#Ortschaftenverzeichnis--Download
+
+check the current link for the csv ( the second csv shich does not have more data options, in WGS84 format )
+
+```
+curl -O  'https://data.geo.admin.ch/ch.swisstopo-vd.ortschaftenverzeichnis_plz/ortschaftenverzeichnis_plz/ortschaftenverzeichnis_plz_4326.csv.zip'
+unzip *.zip
+```
+
 # Update the zone
 
 ```
-python3 generate-zone.py > zipdns.ch.zone
+python3 generate-zone.py AMTOVZ_CSV_WGS84/AMTOVZ_CSV_WGS84.csv  > zipdns.ch.zone
 ```
 
 replace records in powerdns:

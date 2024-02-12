@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-import requests 
-import json 
+
 import sys
 import time
 from datetime import datetime
@@ -15,17 +14,19 @@ def dectodms(coord):
    return (int(degrees),int(minutes),seconds)
 
 
-def generate_loc(jsondata,ttl=86400):
-    
-    for row in jsondata:
-        if 'geometry' not in row:
+def generate_loc(csvdata,ttl=86400):
+    zoom=12
+
+    for row in csvdata:
+        if 'Ortschaftsname' not in row:
             continue 
-        fields = row['fields']
-        lieu = fields['ortbez18']
-        postleitzahl = fields['postleitzahl']
-        meridien,grado_di_latitudine=row['geometry']['coordinates']
-        lat_h,lat_m,lat_s = dectodms(grado_di_latitudine)
-        lon_h,lon_m,lon_s = dectodms(meridien)
+
+        lieu = row['Ortschaftsname']
+        postleitzahl = row['PLZ']
+        longtitude = float(row['E'])
+        latitude = float(row['N'])
+        lat_h,lat_m,lat_s = dectodms(latitude)
+        lon_h,lon_m,lon_s = dectodms(longtitude)
 
         plz_loc_record = f'{postleitzahl} {ttl} IN LOC {lat_h} {lat_m} {lat_s:.3f} N {lon_h} {lon_m} {lon_s:.3f} E 1.00m 1.00m 10000.00m 10.00m'
         yield plz_loc_record
@@ -33,7 +34,7 @@ def generate_loc(jsondata,ttl=86400):
         plz_txt_record = f'{postleitzahl} {ttl} IN TXT "{lieu}"'
         yield plz_txt_record
 
-        plz_uri_record = f'{postleitzahl} {ttl} IN URI 10 1 "http://www.openstreetmap.org/?mlat={grado_di_latitudine}&mlon={meridien}&zoom=12"'
+        plz_uri_record = f'{postleitzahl} {ttl} IN URI 10 1 "https://www.openstreetmap.org/#map={zoom}/{latitude}/{longtitude}"'
         yield plz_uri_record
 
         # 'buchs zh' -> 'buchs_zh'
@@ -60,17 +61,25 @@ def generate_loc(jsondata,ttl=86400):
             ort_txt_record = f'{ort_idna} {ttl} IN TXT "{postleitzahl}"'
             yield ort_txt_record
 
-            ort_uri_record = f'{ort_idna} {ttl} IN URI 10 1 "http://www.openstreetmap.org/?mlat={grado_di_latitudine}&mlon={meridien}&zoom=12"'
+            ort_uri_record = f'{ort_idna} {ttl} IN URI 10 1 "https://www.openstreetmap.org/#map={zoom}/{latitude}/{longtitude}"'
             yield ort_uri_record
         
 
 if __name__=='__main__':
-    url = 'https://swisspost.opendatasoft.com/explore/dataset/plz_verzeichnis_v2/download/?format=json&timezone=Europe/Berlin&lang=de'
-    if len(sys.argv)>1:
-        jsondata = json.load(open(sys.argv[1],'r'))
-    else:
-        jsondata = requests.get(url).json()
-    
+    # the first argument must be a path to a csv file
+    if len(sys.argv) < 2:
+        print('Usage: generate-zone.py <path-to-csv-file>')
+        print('Download the csv from https://www.swisstopo.admin.ch/de/amtliches-ortschaftenverzeichnis#Ortschaftenverzeichnis--Download')
+        print('Use the CSV in WGS84 format ( the one that has no files in other formats)')
+        sys.exit(1)
+
+    # read the csv file into a list of dictionaries
+    import csv
+    with open(sys.argv[1], 'r',  encoding='utf-8-sig') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter=';')
+        csvdata = list(reader)
+
+
     ZONE='zipdns.ch'
     NS=[
         'fries.anooky-dns.ch',
@@ -87,6 +96,6 @@ if __name__=='__main__':
     print(f'@ 3600 IN TXT "v=spf1 -all"')
     print(f'_dmarc 3600 IN TXT "v=DMARC1; p=reject;"')
 
-    sorted_unique_recs = sorted(set([r for r in generate_loc(jsondata)]))
+    sorted_unique_recs = sorted(set([r for r in generate_loc(csvdata)]))
     for row in sorted_unique_recs:
         print(row)
